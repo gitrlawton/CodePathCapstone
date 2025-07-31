@@ -1,0 +1,110 @@
+# Local Tourist Attraction Feed (Trip Advisor / Google Maps)
+
+## Table of Contents
+
+1. [App Overview](#App-Overview)
+1. [Product Spec](#Product-Spec)
+1. [Wireframes](#Wireframes)
+1. [Build Notes](#Build-Notes)
+
+## App Overview
+
+### Description 
+
+**Description of your app**
+
+## App Evaluation
+
+<!-- Evaluation of your app across the following attributes -->
+
+### Local Tourist Attraction Feed (Trip Advisor / Google Maps)
+
+#### Mobile: How uniquely mobile is the product experience?
+- What makes your app more than a glorified website?
+> Answer: App allows you to plan while you're on the go.
+
+#### Story: How compelling is the story around this app once completed?
+- How clear is the value of this app to your audience?
+- How well would your friends or peers respond to this product idea?
+> Answer: Our peers are the target age demographic for traveling. 
+
+#### Market: How large or unique is the market for this app?
+
+- What's the size and scale of your potential user base?
+- Does this app provide huge value to a niche group of people?
+- Do you have a well-defined audience of people for this app?
+
+#### Habit: How habit-forming or addictive is this app?
+
+- How frequently would an average user open and use this app?
+- Does an average user just consume your app, or do they use it to create something?
+
+#### Scope: How well-formed is the scope for this app?
+
+- How technically challenging will it be to complete this app by the deadline?
+- Is a stripped-down version of this app still interesting to build?
+- How clearly defined is the product you want to build?
+
+## Product Spec
+
+### 1. User Features (Required and Optional)
+
+Required Features:
+
+- **fill in here**
+- ...
+
+Stretch Features:
+
+- **fill in here**
+- ...
+
+### 2. Chosen API(s)
+
+- **list first API endpoint here**
+  - **list associated required feature here**
+  - ...
+- ...
+
+### 3. User Interaction
+
+Required Feature
+
+- **list first user action here**
+  - => **list result of user action here**
+  - ...
+- **list second user action here**
+  - => **list result of user action here**
+  - ...
+
+## Wireframes
+
+<!-- Add picture of your hand sketched wireframes in this section -->
+<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+
+### [BONUS] Digital Wireframes & Mockups
+
+### [BONUS] Interactive Prototype
+
+## Build Notes
+
+Here's a place for any other notes on the app, it's creation 
+process, or what you learned this unit!  
+
+For Milestone 2, include **2+ Videos/GIFs** of the build process here!
+
+## License
+
+Copyright **yyyy** **your name**
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
