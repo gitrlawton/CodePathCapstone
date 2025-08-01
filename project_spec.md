@@ -9,13 +9,12 @@
 
 ## App Overview
 
+
 ### Description 
 
-**Description of your app**
+A TripAdvisor-style app that allows users to search for interesting places to go in the city they're at (historical locations, places to eat, galleries/museums, other points of interest).
 
 ## App Evaluation
-
-<!-- Evaluation of your app across the following attributes -->
 
 ### Local Tourist Attraction Feed (Trip Advisor / Google Maps)
 
@@ -33,17 +32,20 @@
 - What's the size and scale of your potential user base?
 - Does this app provide huge value to a niche group of people?
 - Do you have a well-defined audience of people for this app?
+> Answer: Global user base, not niche, but catered to tourists or people visiting another city (travelers / vacationers, sight-seers).
 
 #### Habit: How habit-forming or addictive is this app?
 
 - How frequently would an average user open and use this app?
 - Does an average user just consume your app, or do they use it to create something?
+> Answer: Not habit-forming like social media.  User consumes MVP, with potential for creating something as a stretch feature (itinerary, cost calculator).
 
 #### Scope: How well-formed is the scope for this app?
 
 - How technically challenging will it be to complete this app by the deadline?
 - Is a stripped-down version of this app still interesting to build?
 - How clearly defined is the product you want to build?
+> Answer: MVP makes a request to API with user input for location, filters, and displays scrollable list of results.  Not technically challenging as an MVP, but still interesting to build.  Clearly well-defined.
 
 ## Product Spec
 
@@ -51,33 +53,41 @@
 
 Required Features:
 
-- **fill in here**
-- ...
+- Search for points of interest by:
+    - City
+    - Filter by category(coffee, restaurants, parks...)
+    - Nearby using GPS
+    - Favourites tab
+- Recycler view of results
+- Search form / bar
 
 Stretch Features:
 
-- **fill in here**
-- ...
+- Search and book for tour groups, hotels, flights
+- Interactive map
 
 ### 2. Chosen API(s)
 
-- **list first API endpoint here**
-  - **list associated required feature here**
-  - ...
-- ...
+- SerpAPI
+  - https://serpapi.com/google-local-api
+- Google Places API (fallback)
 
-### 3. User Interaction
+### 3. User Interactions
 
-Required Feature
+#### Main
+- Searching (enter city, filter selections)
+  - Result: Displays a list ofsearch results matching location and selected filters in a scrollable list.
 
-- **list first user action here**
-  - => **list result of user action here**
-  - ...
-- **list second user action here**
-  - => **list result of user action here**
-  - ...
+#### Stretch
+- Favoriting functionality
+  - Result: Adds item to list of favorites 
+- Double-click 
+    - Result: Displays more detailed information about item
+- Possible Map interactions
+    - Button to open google maps and display location 
+    - Zoom in, zoom out, scroll around
 
-## Wireframes
+## Wireframes (TODO)
 
 <!-- Add picture of your hand sketched wireframes in this section -->
 <img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
@@ -93,9 +103,9 @@ process, or what you learned this unit!
 
 For Milestone 2, include **2+ Videos/GIFs** of the build process here!
 
-## License
+## License (TODO)
 
-Copyright **yyyy** **your name**
+Copyright **2025** **Ryan Lawton, Alex Surprenant, Myat Min Htoo **
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
