@@ -7,7 +7,7 @@ Submitted by:
 - **Team Member 2 Name Here**
 - **etc**
 
-Time spent: **X** hours spent in total
+Time spent: **2** hours spent in total
 
 ## Summary
 
