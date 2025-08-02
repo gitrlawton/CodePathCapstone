@@ -17,5 +17,6 @@ class MainActivity : AppCompatActivity() {
 
         val apiKey = BuildConfig.API_KEY
 
+        Log.d("APIKEY", "This is api key:  $apiKey")
     }
 }
