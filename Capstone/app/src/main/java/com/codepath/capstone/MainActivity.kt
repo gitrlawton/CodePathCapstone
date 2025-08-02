@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val apiKey = BuildConfig.API_KEY
+        val url = "https://serpapi.com/search.json?engine=google_local&q=Coffee&location=New+York,+New+York,+United+States"
 
         Log.d("APIKEY", "This is api key:  $apiKey")
     }
