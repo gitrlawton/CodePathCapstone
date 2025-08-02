@@ -8,23 +8,14 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/APIResults"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello AND101 Group 31!!!"
+        android:text="Results"
+        android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Members: Saurab, Myat, Ryan, Emmanuel, Dagmawi, Alex"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
