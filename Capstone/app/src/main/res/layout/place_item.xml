@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_margin="8dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="130dp"
+            android:layout_height="140dp"
+            android:src="@drawable/placeholder_image"
+            />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/locationName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location Title"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/starRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*****" />
+
+            <TextView
+                android:id="@+id/hoursOfOperation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10:00am - 4:13pm" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="This place has the best statues, and I will never shop anywhere else." />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
