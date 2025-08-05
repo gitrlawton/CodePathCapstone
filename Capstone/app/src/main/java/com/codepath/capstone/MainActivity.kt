@@ -12,9 +12,13 @@ import androidx.core.view.updatePadding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
+<<<<<<< HEAD
     //***** main activity container ******
     private lateinit var container: FrameLayout
     //***** main activity container ******
+=======
+    private lateinit var container: FrameLayout
+>>>>>>> 738c8d8d83bf432a3ba5bdacf42563bc85efdb23
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val mainLayout = findViewById<View>(R.id.main)
+<<<<<<< HEAD
 
         //******************************************************
         //**** nav bar and main activity container *************
@@ -32,6 +37,11 @@ class MainActivity : AppCompatActivity() {
 
         //***********************************
         //***** code for the nav bar ********
+=======
+        val bottomNavBar = findViewById<BottomNavigationView>(R.id.bottomNavBar) //changed this line to use BottomNavigationView. gives setOnItemSelectedListener method to bottomNavBar -Alex
+        container = findViewById(R.id.fragment_container)
+
+>>>>>>> 738c8d8d83bf432a3ba5bdacf42563bc85efdb23
         ViewCompat.setOnApplyWindowInsetsListener(mainLayout) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, 0)
@@ -43,11 +53,15 @@ class MainActivity : AppCompatActivity() {
             v.updatePadding(bottom = systemBars.bottom)
             insets
         }
+<<<<<<< HEAD
         //***** code for the nav bar *******
         //**********************************
 
         //***********************************************************************
         //*** code for giving functionality to the nav bar WORK IN PROGRESS -Alex
+=======
+    //*** code for giving functionality to the nav bar WORK IN PROGRESS -Alex
+>>>>>>> 738c8d8d83bf432a3ba5bdacf42563bc85efdb23
         loadLayout(R.layout.activity_main)
 
         bottomNavBar.setOnItemSelectedListener { item ->
@@ -72,5 +86,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     //*** End of nav bar functionality code block ******
+<<<<<<< HEAD
     //**************************************************
 }
+=======
+}
+>>>>>>> 738c8d8d83bf432a3ba5bdacf42563bc85efdb23
