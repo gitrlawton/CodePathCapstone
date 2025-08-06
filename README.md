@@ -2,7 +2,7 @@
 
 Submitted by:
 
-- Ryan Lawton
+- **Ryan Lawton**
 - **Alex Surprenant**
 - **Myat Min Htoo**
 - **Saurab Gyawali**
@@ -31,20 +31,24 @@ The following REQUIRED files are included:
   - [x] Checked off 2+ completed features
   - [x] 2+ Videos/GIFs of build progress
 
-- [ ] Our 🎥 Demo Video
-  - [ ] We have also added the Demo Video Link to the Group Info Form on the course portal.
+- [x] Our 🎥 Demo Video
+  - [x] We have also added the Demo Video Link to the Group Info Form on the course portal.
 
 The following EXTRA features are implemented:
 
 - [ ] List anything else that you added to improve your submission!
 
-## 🎥 Demo Video
+## 🎥 Demo GIF + Video
 
-Here's a video that demos all of the app's implemented features:
+Here's a GIF that demos all of the app's implemented features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Demo' width='' alt='Video Demo' />
+![Demo](https://i.imgur.com/l5NxpVq.gif)
 
-VIDEO created with **your chosen video tool**
+[CLICK HERE TO WATCH THE DEMO VIDEO ON YOUTUBE](https://www.youtube.com/watch?v=p-HfMGBSI4U)
+
+VIDEO created with **YouTube**
+
+GIF created with **EZGif**
 
 ## Notes
 
