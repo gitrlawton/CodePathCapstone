@@ -11,6 +11,7 @@ object PlaceRepository {
         return RetrofitInstance.api.getPlaces(
             query = query,
             location = location,
+            num = 20,
             hl = "en",               // or your desired language code
             gl = "us",
             domain = "google.com",

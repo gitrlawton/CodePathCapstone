@@ -173,6 +173,7 @@ class MainActivity : AppCompatActivity() {
                 val response = RetrofitInstance.api.getPlaces(
                     query    = query,
                     location = location,
+                    num      = 20,
                     hl       = "en",
                     gl       = "us",
                     domain   = "google.com",
