@@ -6,7 +6,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity_Myat">
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/scrollContainer"
@@ -144,8 +144,6 @@
                 </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <!-- Restaurants Section -->
-            <!-- INSERT THE FULL 5 RESTAURANT CARDS XML CODE HERE FROM PREVIOUS RESPONSE -->
             <LinearLayout
                 android:id="@+id/restaurantSection"
                 android:layout_width="match_parent"
@@ -162,7 +160,6 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"/>
 
-                <!-- Restaurant Card 1 -->
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/restaurantCard1"
                     android:layout_width="match_parent"
@@ -214,7 +211,6 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
-                <!-- Restaurant Card 2 -->
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/restaurantCard2"
                     android:layout_width="match_parent"
@@ -318,7 +314,6 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
-                <!-- Restaurant Card 4 -->
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/restaurantCard4"
                     android:layout_width="match_parent"
@@ -370,7 +365,6 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
-                <!-- Restaurant Card 5 -->
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/restaurantCard5"
                     android:layout_width="match_parent"
