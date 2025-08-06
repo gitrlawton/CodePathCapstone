@@ -161,74 +161,59 @@ class MainActivity : AppCompatActivity() {
     private fun fetchSearchResults(
         query: String,
         location: String,
-        minRating: Double,       // Use Double to match data class rating type
-        distance: String,        // Not used yet, can be implemented with API params or filtering
-        isOpenNow: Boolean,
-        price: String?,          // E.g. "$" or "$$"
-        isFamilyFriendly: Boolean
+        minRating: Double,       // still declared but not used
+        distance: String,        // still declared but not used
+        isOpenNow: Boolean,      // still declared but not used
+        price: String?,          // still declared but not used
+        isFamilyFriendly: Boolean// still declared but not used
     ) {
         CoroutineScope(Dispatchers.IO).launch {
             try {
+                // 1️⃣ Fire the Retrofit call
                 val response = RetrofitInstance.api.getPlaces(
-                    query = query,
+                    query    = query,
                     location = location,
-                    hl = "en",
-                    gl = "us",
-                    domain = "google.com",
-                    apiKey = BuildConfig.API_KEY
+                    hl       = "en",
+                    gl       = "us",
+                    domain   = "google.com",
+                    apiKey   = BuildConfig.API_KEY
                 )
 
                 if (response.isSuccessful) {
-                    val body = response.body()
-                    val places = body?.local_results?.places ?: emptyList()
+                    // 2️⃣ Grab the raw list of places (or empty if null)
+                    val places = response.body()
+                        ?.local_results
+                        ?.places
+                        ?: emptyList()
 
-                    // Debug log
-                    Log.d("API_CALL", "Places found: ${places.size}")
-
-                    val filteredPlaces = places.filter { place ->
-
-                        // Filter by rating - ensure rating is not null and meets minimum
-                        val meetsRating = (place.rating ?: 0.0) >= minRating.toDouble()
-
-                        // Filter by price if provided - adapt field name if needed
-                        val meetsPrice = price?.let { it == place.price_level || it == place.price } ?: true
-
-                        // Filter by open now - simplistic check based on hours string containing "Open"
-                        val meetsOpenNow = if (isOpenNow) {
-                            place.hours?.contains("Open", ignoreCase = true) == true
-                        } else true
-
-                        // Filter by family friendly - you might want to check category/type keywords
-                        val meetsFamilyFriendly = if (isFamilyFriendly) {
-                            place.category?.contains("family", ignoreCase = true) == true ||
-                                    place.category?.contains("kid", ignoreCase = true) == true ||
-                                    place.category?.contains("children", ignoreCase = true) == true
-                        } else true
-
-                        meetsRating && meetsPrice && meetsOpenNow && meetsFamilyFriendly
+                    // 3️⃣ Optional debug logs
+                    Log.d("API_CALL", "Fetched ${places.size} places:")
+                    places.forEachIndexed { i, place ->
+                        Log.d("API_CALL", "[$i] ${place.title} • rating=${place.rating} • address=${place.address}")
                     }
 
+                    // 4️⃣ Ship it to the UI
                     withContext(Dispatchers.Main) {
-                        displaySearchResults(filteredPlaces)
+                        displaySearchResults(places)
                     }
 
                 } else {
-                    val errorJson = response.errorBody()?.string()
-                    Log.e("API_CALL", "API error code: ${response.code()}, error: $errorJson")
+                    // on HTTP-error just show an empty list
+                    Log.e("API_CALL", "HTTP ${response.code()} / ${response.errorBody()?.string()}")
                     withContext(Dispatchers.Main) {
                         displaySearchResults(emptyList())
                     }
                 }
 
             } catch (e: Exception) {
-                Log.e("API_ERROR", "Exception during API call: ${e.message}", e)
+                // on network or JSON parse error show empty list
+                Log.e("API_CALL", "Exception during API call", e)
                 withContext(Dispatchers.Main) {
                     displaySearchResults(emptyList())
                 }
             }
         }
     }
-
 
     // display the results
     private fun displaySearchResults(results: List<LocalResult>) {
