@@ -1,13 +1,14 @@
-<!-- (This is a comment) INSTRUCTIONS: Go through this page and fill out any **bolded** entries with their correct values.-->
+# TODO
 
 # AND101 Milestone 2 - **Team/App Name**
 
 Submitted by:
-- **Team Member 1 Name Here**
+
+- Ryan Lawton
 - **Team Member 2 Name Here**
 - **etc**
 
-Time spent: **2** hours spent in total
+Time spent: **25+** hours spent in total
 
 ## Summary
 
@@ -25,8 +26,9 @@ The following REQUIRED features are completed:
 The following REQUIRED files are included:
 
 - [ ] Updated 📄 `project_spec.md`, which contains:
-  - [X] App Overview (Milestone 1)
-  - [X] App Spec (Milestone 1)
+
+  - [x] App Overview (Milestone 1)
+  - [x] App Spec (Milestone 1)
   - [ ] Checked off 2+ completed features
   - [ ] 2+ Videos/GIFs of build progress
 

@@ -181,22 +181,22 @@ class MainActivity : AppCompatActivity() {
                 )
 
                 if (response.isSuccessful) {
-                    // 2️⃣ Grab the raw list of places (or empty if null)
-                    val places = response.body()
-                        ?.local_results
-                        ?.places
-                        ?: emptyList()
+                    val rawResponse = response.body()
+                    Log.d("API_RAW", "Raw response: $rawResponse")
 
-                    // 3️⃣ Optional debug logs
+                    // Direct access to the list
+                    val places: List<LocalResult> = rawResponse?.local_results ?: emptyList()
+
                     Log.d("API_CALL", "Fetched ${places.size} places:")
                     places.forEachIndexed { i, place ->
                         Log.d("API_CALL", "[$i] ${place.title} • rating=${place.rating} • address=${place.address}")
                     }
 
-                    // 4️⃣ Ship it to the UI
                     withContext(Dispatchers.Main) {
                         displaySearchResults(places)
                     }
+
+
 
                 } else {
                     // on HTTP-error just show an empty list

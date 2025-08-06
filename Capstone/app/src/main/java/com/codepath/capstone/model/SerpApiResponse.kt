@@ -2,13 +2,7 @@ package com.codepath.capstone.model
 
 // Top‐level response object
 data class SerpApiResponse(
-    val local_results: LocalResults?
-)
-
-// Wrapper for the “local_results” block
-data class LocalResults(
-    val more_locations_link: String?,
-    val places: List<LocalResult>?
+    val local_results: List<LocalResult>?  // ✅ Direct list
 )
 
 

@@ -34,7 +34,7 @@ class ResultsAdapter(private val items: MutableList<LocalResult>) :
         val stars = "★".repeat(rating.toInt()) + "☆".repeat(5 - rating.toInt())
         holder.starRating.text = "$stars (${item.reviews ?: 0})"
         holder.hoursOfOperation.text = item.hours ?: "Hours not available"
-        holder.description.text = item.category ?: item.address ?: "No description"
+        holder.description.text = item.type ?: item.address ?: "No description"
 
         if (!item.thumbnail.isNullOrEmpty()) {
             Glide.with(holder.image.context)

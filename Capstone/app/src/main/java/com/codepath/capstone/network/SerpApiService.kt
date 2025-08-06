@@ -10,6 +10,7 @@ import com.codepath.capstone.BuildConfig
 interface SerpApiService {
     @GET("search.json")
     suspend fun getPlaces(
+        @Query("engine") engine: String = "google_local",
         @Query("q") query: String,
         @Query("location") location: String,
         @Query("num") num: Int,

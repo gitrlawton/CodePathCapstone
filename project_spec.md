@@ -9,8 +9,7 @@
 
 ## App Overview
 
-
-### Description 
+### Description
 
 A TripAdvisor-style app that allows users to search for interesting places to go in the city they're at (historical locations, places to eat, galleries/museums, other points of interest).
 
@@ -19,33 +18,35 @@ A TripAdvisor-style app that allows users to search for interesting places to go
 ### Local Tourist Attraction Feed (Trip Advisor / Google Maps)
 
 #### Mobile: How uniquely mobile is the product experience?
+
 - What makes your app more than a glorified website?
-> Answer: App allows you to plan while you're on the go.
+  > Answer: App allows you to plan while you're on the go.
 
 #### Story: How compelling is the story around this app once completed?
+
 - How clear is the value of this app to your audience?
 - How well would your friends or peers respond to this product idea?
-> Answer: Our peers are the target age demographic for traveling. 
+  > Answer: Our peers are the target age demographic for traveling.
 
 #### Market: How large or unique is the market for this app?
 
 - What's the size and scale of your potential user base?
 - Does this app provide huge value to a niche group of people?
 - Do you have a well-defined audience of people for this app?
-> Answer: Global user base, not niche, but catered to tourists or people visiting another city (travelers / vacationers, sight-seers).
+  > Answer: Global user base, not niche, but catered to tourists or people visiting another city (travelers / vacationers, sight-seers).
 
 #### Habit: How habit-forming or addictive is this app?
 
 - How frequently would an average user open and use this app?
 - Does an average user just consume your app, or do they use it to create something?
-> Answer: Not habit-forming like social media.  User consumes MVP, with potential for creating something as a stretch feature (itinerary, cost calculator).
+  > Answer: Not habit-forming like social media. User consumes MVP, with potential for creating something as a stretch feature (itinerary, cost calculator).
 
 #### Scope: How well-formed is the scope for this app?
 
 - How technically challenging will it be to complete this app by the deadline?
 - Is a stripped-down version of this app still interesting to build?
 - How clearly defined is the product you want to build?
-> Answer: MVP makes a request to API with user input for location, filters, and displays scrollable list of results.  Not technically challenging as an MVP, but still interesting to build.  Clearly well-defined.
+  > Answer: MVP makes a request to API with user input for location, filters, and displays scrollable list of results. Not technically challenging as an MVP, but still interesting to build. Clearly well-defined.
 
 ## Product Spec
 
@@ -54,10 +55,10 @@ A TripAdvisor-style app that allows users to search for interesting places to go
 Required Features:
 
 - Search for points of interest by:
-    - City
-    - Filter by category(coffee, restaurants, parks...)
-    - Nearby using GPS
-    - Favourites tab
+  - City
+  - Filter by category(coffee, restaurants, parks...)
+  - Nearby using GPS
+  - Favourites tab
 - Recycler view of results
 - Search form / bar
 
@@ -75,31 +76,46 @@ Stretch Features:
 ### 3. User Interactions
 
 #### Main
+
 - Searching (enter city, filter selections)
   - Result: Displays a list ofsearch results matching location and selected filters in a scrollable list.
 
 #### Stretch
+
 - Favoriting functionality
-  - Result: Adds item to list of favorites 
-- Double-click 
-    - Result: Displays more detailed information about item
+  - Result: Adds item to list of favorites
+- Double-click
+  - Result: Displays more detailed information about item
 - Possible Map interactions
-    - Button to open google maps and display location 
-    - Zoom in, zoom out, scroll around
+  - Button to open google maps and display location
+  - Zoom in, zoom out, scroll around
 
 ## Wireframes (TODO)
 
 <!-- Add picture of your hand sketched wireframes in this section -->
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+
+![me](https://github.com/Code-Path-AND101-group-31/CodePathCapstone/blob/main/images/myat_drawn_wireframe.jpg)
+
+![me](https://github.com/Code-Path-AND101-group-31/CodePathCapstone/blob/main/images/myat_drawn_wireframe2.jpg)
 
 ### [BONUS] Digital Wireframes & Mockups
 
 ### [BONUS] Interactive Prototype
 
+## Build Progress
+
+These are two gifs that represent significant milestones in our progress in building the application
+
+![me](https://github.com/Code-Path-AND101-group-31/CodePathCapstone/blob/main/images/capstone1.gif)
+This is the successful function of the search component, pulling and displaying data from the API.
+
+![me](https://github.com/Code-Path-AND101-group-31/CodePathCapstone/blob/main/images/capstone2.gif)
+This GIF shows the functionality of the navigation bar at the bottom of the screen.
+
 ## Build Notes
 
-Here's a place for any other notes on the app, it's creation 
-process, or what you learned this unit!  
+Here's a place for any other notes on the app, it's creation
+process, or what you learned this unit!
 
 For Milestone 2, include **2+ Videos/GIFs** of the build process here!
 
