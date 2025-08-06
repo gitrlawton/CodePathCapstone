@@ -1,4 +1,4 @@
-# Local Tourist Attraction Feed (Trip Advisor / Google Maps)
+# Yatra - Local Tourist Attraction Feed (Trip Advisor / Google Maps)
 
 ## Table of Contents
 
@@ -94,14 +94,9 @@ Stretch Features:
   - Button to open google maps and display location
   - Zoom in, zoom out, scroll around
 
-## Wireframes (TODO)
+## Wireframes
 
 <!-- Add picture of your hand sketched wireframes in this section -->
-<<<<<<< HEAD
-=======
-<img src="https://imgur.com/gallery/myat-wireframe-one-tba4gH3" width=600>
-<img src="https://imgur.com/gallery/myat2-jwHrUdJ" width=600>
->>>>>>> c1b9e48 (wireframes added to project spec)
 
 ![me](https://github.com/Code-Path-AND101-group-31/CodePathCapstone/blob/main/images/myat_drawn_wireframe.jpg)
 
@@ -121,9 +116,9 @@ Below are two gifs that represent significant milestones in our progress in buil
 
 ^ The above GIF shows the functionality of the navigation bar at the bottom of the screen.
 
-## License (TODO)
+## License
 
-Copyright **2025** **Ryan Lawton, Alex Surprenant, Myat Min Htoo, Saurab Gyawali **
+Copyright **2025** **Ryan Lawton, Alex Surprenant, Myat Min Htoo, Saurab Gyawali**
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
