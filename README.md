@@ -42,7 +42,7 @@ The following EXTRA features are implemented:
 
 Here's a GIF that demos all of the app's implemented features:
 
-![Demo](https://i.imgur.com/qTfPWxv.gif)
+![Demo](https://i.imgur.com/ix4GWff.gif)
 
 [CLICK HERE TO WATCH THE DEMO VIDEO ON YOUTUBE](https://www.youtube.com/watch?v=p-HfMGBSI4U)
 
