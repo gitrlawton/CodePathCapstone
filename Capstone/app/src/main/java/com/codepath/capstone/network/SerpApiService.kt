@@ -5,7 +5,6 @@ import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
 import com.codepath.capstone.BuildConfig
-import android.util.Log
 
 interface SerpApiService {
     @GET("search.json")

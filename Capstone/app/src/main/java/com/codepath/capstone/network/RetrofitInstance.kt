@@ -1,4 +1,3 @@
-
 package com.codepath.capstone.network
 
 import retrofit2.Retrofit

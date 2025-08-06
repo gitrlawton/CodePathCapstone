@@ -151,76 +151,84 @@ class MainActivity : AppCompatActivity() {
         fetchSearchResults(
             query,
             location,
-            minRating,
+            minRating.toDouble(),
             distance,
             isOpenNow,
             price,
             isFamilyFriendly
         )
     }
-
-    // fetch results using RetrofitInstance
     private fun fetchSearchResults(
         query: String,
         location: String,
-        minRating: Float,
-        distance: String,
+        minRating: Double,       // Use Double to match data class rating type
+        distance: String,        // Not used yet, can be implemented with API params or filtering
         isOpenNow: Boolean,
-        price: String?,
+        price: String?,          // E.g. "$" or "$$"
         isFamilyFriendly: Boolean
     ) {
-        val apiKey = BuildConfig.API_KEY // Add your SerpApi key here
-
-        //log me back the value
-        Log.d("API_CALL", """
-        --- API Call Inputs ---
-        query: $query
-        location: $location
-        minRating: $minRating
-        distance: $distance
-        isOpenNow: $isOpenNow
-        price: $price
-        familyFriendly: $isFamilyFriendly
-        apiKey: $apiKey
-    """.trimIndent())
-
         CoroutineScope(Dispatchers.IO).launch {
             try {
-                val response = RetrofitInstance.api.getPlaces(query, location, apiKey)
-                Log.d("API_CALL", "Response Code: ${response.code()}")
-                Log.d("API_CALL", "Is Successful: ${response.isSuccessful}")
+                val response = RetrofitInstance.api.getPlaces(
+                    query = query,
+                    location = location,
+                    hl = "en",
+                    gl = "us",
+                    domain = "google.com",
+                    apiKey = BuildConfig.API_KEY
+                )
 
                 if (response.isSuccessful) {
-                    val responseBody = response.body()
+                    val body = response.body()
+                    val places = body?.local_results?.places ?: emptyList()
 
-                    if (responseBody != null) {
-                        Log.d(
-                            "API_CALL",
-                            "local_results: ${responseBody.local_results?.size} items found"
-                        )
+                    // Debug log
+                    Log.d("API_CALL", "Places found: ${places.size}")
 
-                        responseBody.local_results?.forEachIndexed { index, result ->
-                            Log.d(
-                                "API_CALL",
-                                "Result[$index]: ${result.title}, Rating: ${result.rating}, Address: ${result.address}"
-                            )
-                        }
+                    val filteredPlaces = places.filter { place ->
+
+                        // Filter by rating - ensure rating is not null and meets minimum
+                        val meetsRating = (place.rating ?: 0.0) >= minRating.toDouble()
+
+                        // Filter by price if provided - adapt field name if needed
+                        val meetsPrice = price?.let { it == place.price_level || it == place.price } ?: true
+
+                        // Filter by open now - simplistic check based on hours string containing "Open"
+                        val meetsOpenNow = if (isOpenNow) {
+                            place.hours?.contains("Open", ignoreCase = true) == true
+                        } else true
+
+                        // Filter by family friendly - you might want to check category/type keywords
+                        val meetsFamilyFriendly = if (isFamilyFriendly) {
+                            place.category?.contains("family", ignoreCase = true) == true ||
+                                    place.category?.contains("kid", ignoreCase = true) == true ||
+                                    place.category?.contains("children", ignoreCase = true) == true
+                        } else true
+
+                        meetsRating && meetsPrice && meetsOpenNow && meetsFamilyFriendly
+                    }
+
+                    withContext(Dispatchers.Main) {
+                        displaySearchResults(filteredPlaces)
+                    }
+
+                } else {
+                    val errorJson = response.errorBody()?.string()
+                    Log.e("API_CALL", "API error code: ${response.code()}, error: $errorJson")
+                    withContext(Dispatchers.Main) {
+                        displaySearchResults(emptyList())
                     }
                 }
-                val results = responseBody?.local_results?.filter {
-                    (it.rating ?: 0.0) >= minRating &&
-                            (price == null || it.price_level == price)
-                } ?: emptyList()
 
-                withContext(Dispatchers.Main) {
-                    displaySearchResults(results)
-                }
             } catch (e: Exception) {
-                Log.e("API_ERROR", "Error: ${e.message}", e)
+                Log.e("API_ERROR", "Exception during API call: ${e.message}", e)
+                withContext(Dispatchers.Main) {
+                    displaySearchResults(emptyList())
+                }
             }
         }
-
     }
+
 
     // display the results
     private fun displaySearchResults(results: List<LocalResult>) {
