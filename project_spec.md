@@ -54,13 +54,16 @@ A TripAdvisor-style app that allows users to search for interesting places to go
 
 Required Features:
 
-- Search for points of interest by:
-  - City
-  - Filter by category(coffee, restaurants, parks...)
-  - Nearby using GPS
-  - Favourites tab
-- Recycler view of results
-- Search form / bar
+[X] Search for points of interest by:
+
+- City
+- Filter by category(coffee, restaurants, parks...)
+- Nearby using GPS
+- Favourites tab
+
+[X] Recycler view of results
+
+[X] Bottom Navbar (dock)
 
 Stretch Features:
 
@@ -79,6 +82,7 @@ Stretch Features:
 
 - Searching (enter city, filter selections)
   - Result: Displays a list ofsearch results matching location and selected filters in a scrollable list.
+- Navigation
 
 #### Stretch
 
@@ -98,30 +102,23 @@ Stretch Features:
 
 ![me](https://github.com/Code-Path-AND101-group-31/CodePathCapstone/blob/main/images/myat_drawn_wireframe2.jpg)
 
-### [BONUS] Digital Wireframes & Mockups
-
-### [BONUS] Interactive Prototype
-
-## Build Progress
-
-These are two gifs that represent significant milestones in our progress in building the application
-
-![me](https://github.com/Code-Path-AND101-group-31/CodePathCapstone/blob/main/images/capstone1.gif)
-This is the successful function of the search component, pulling and displaying data from the API.
-
-![me](https://github.com/Code-Path-AND101-group-31/CodePathCapstone/blob/main/images/capstone2.gif)
-This GIF shows the functionality of the navigation bar at the bottom of the screen.
-
 ## Build Notes
-
-Here's a place for any other notes on the app, it's creation
-process, or what you learned this unit!
 
 For Milestone 2, include **2+ Videos/GIFs** of the build process here!
 
+Below are two gifs that represent significant milestones in our progress in building the application.
+
+![me](https://github.com/Code-Path-AND101-group-31/CodePathCapstone/blob/main/images/capstone1.gif)
+
+^ The above GIF is the successful function of the search component, pulling and displaying data from the API.
+
+![me](https://github.com/Code-Path-AND101-group-31/CodePathCapstone/blob/main/images/capstone2.gif)
+
+^ The above GIF shows the functionality of the navigation bar at the bottom of the screen.
+
 ## License (TODO)
 
-Copyright **2025** **Ryan Lawton, Alex Surprenant, Myat Min Htoo **
+Copyright **2025** **Ryan Lawton, Alex Surprenant, Myat Min Htoo, Saurab Gyawali **
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
