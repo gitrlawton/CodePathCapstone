@@ -97,6 +97,11 @@ Stretch Features:
 ## Wireframes (TODO)
 
 <!-- Add picture of your hand sketched wireframes in this section -->
+<<<<<<< HEAD
+=======
+<img src="https://imgur.com/gallery/myat-wireframe-one-tba4gH3" width=600>
+<img src="https://imgur.com/gallery/myat2-jwHrUdJ" width=600>
+>>>>>>> c1b9e48 (wireframes added to project spec)
 
 ![me](https://github.com/Code-Path-AND101-group-31/CodePathCapstone/blob/main/images/myat_drawn_wireframe.jpg)
 
