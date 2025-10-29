@@ -24,7 +24,7 @@
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
                 android:clipToOutline="true"
-                android:src="@drawable/placeholder_image" />
+                android:background="@color/placeholder_background" />
         </androidx.cardview.widget.CardView>
 
 
@@ -39,7 +39,7 @@
                 android:id="@+id/locationName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Location Title"
+                android:text="Loading title..."
                 android:textStyle="bold" />
 
             <TextView
@@ -52,13 +52,13 @@
                 android:id="@+id/hoursOfOperation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="10:00am - 4:13pm" />
+                android:text="00:00am - 00:00pm" />
 
             <TextView
                 android:id="@+id/description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="This place has the best statues, and I will never shop anywhere else." />
+                android:text="Loading description..." />
 
         </LinearLayout>
 

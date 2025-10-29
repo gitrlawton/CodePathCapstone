@@ -39,10 +39,8 @@ class ResultsAdapter(private val items: MutableList<LocalResult>) :
         if (!item.thumbnail.isNullOrEmpty()) {
             Glide.with(holder.image.context)
                 .load(item.thumbnail)
-                .placeholder(R.drawable.placeholder_image)
                 .into(holder.image)
         } else {
-            holder.image.setImageResource(R.drawable.placeholder_image)
         }
     }
     // update method instead of creating a new adapter every time.
