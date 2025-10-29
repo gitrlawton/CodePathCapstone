@@ -1,219 +1,226 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:fillViewport="true">
 
-    <!-- General Search Phrase Label -->
-    <TextView
-        android:id="@+id/search_term_label"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="What are you looking for?"
-        android:labelFor="@+id/search_term_edit_text"
-        android:layout_marginBottom="4dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/search_term_input_layout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="e.g., restaurants, parks, museums"
-        app:layout_constraintTop_toBottomOf="@id/search_term_label"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/search_term_edit_text"
-            android:layout_width="match_parent"
+        <!-- General Search Phrase Label -->
+        <TextView
+            android:id="@+id/search_term_label"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:inputType="text" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:text="What are you looking for?"
+            android:labelFor="@+id/search_term_edit_text"
+            android:layout_marginBottom="4dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- City Label -->
-    <TextView
-        android:id="@+id/city_label"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Location"
-        android:labelFor="@+id/city_edit_text"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="4dp"
-        app:layout_constraintTop_toBottomOf="@id/search_term_input_layout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <!-- City Input -->
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/city_input_layout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Enter City"
-        app:layout_constraintTop_toBottomOf="@id/city_label"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/city_edit_text"
-            android:layout_width="match_parent"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/search_term_input_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:inputType="textCapWords" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:hint="e.g., restaurants, parks, museums"
+            app:layout_constraintTop_toBottomOf="@id/search_term_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
-    <!-- Rating Section -->
-    <TextView
-        android:id="@+id/rating_label"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Minimum Rating:"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@id/city_input_layout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/search_term_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- Distance Label -->
-    <com.google.android.material.slider.Slider
-        android:id="@+id/rating_slider"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:stepSize="0.5"
-        android:value="3.0"
-        android:valueFrom="0.0"
-        android:valueTo="5.0"
-        app:labelBehavior="withinBounds"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rating_label" />
-
-    <TextView
-        android:id="@+id/distance_label"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Distance"
-        android:labelFor="@+id/distance_edit_text"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="4dp"
-        app:layout_constraintTop_toBottomOf="@id/rating_slider"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <!-- Distance Section -->
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/distance_input_layout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Within Miles (e.g., 5)"
-        app:layout_constraintTop_toBottomOf="@id/distance_label"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/distance_edit_text"
-            android:layout_width="match_parent"
+        <!-- City Label -->
+        <TextView
+            android:id="@+id/city_label"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:inputType="numberDecimal" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:text="Location"
+            android:labelFor="@+id/city_edit_text"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="4dp"
+            app:layout_constraintTop_toBottomOf="@id/search_term_input_layout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Open Now Section -->
-    <com.google.android.material.switchmaterial.SwitchMaterial
-        android:id="@+id/open_now_switch"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Open Now"
-        android:textSize="16sp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@id/distance_input_layout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <!-- Price Section -->
-    <TextView
-        android:id="@+id/cost_label"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Price:"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@id/open_now_switch"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <com.google.android.material.chip.ChipGroup
-        android:id="@+id/cost_chip_group"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:singleSelection="true"
-        app:selectionRequired="false"
-        app:layout_constraintTop_toBottomOf="@id/cost_label"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/cost_chip_1"
-            style="@style/Widget.MaterialComponents.Chip.Filter"
-            android:layout_width="wrap_content"
+        <!-- City Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/city_input_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Free" />
+            android:hint="Enter City"
+            app:layout_constraintTop_toBottomOf="@id/city_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
-        <com.google.android.material.chip.Chip
-            android:id="@+id/cost_chip_2"
-            style="@style/Widget.MaterialComponents.Chip.Filter"
-            android:layout_width="wrap_content"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/city_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Rating Section -->
+        <TextView
+            android:id="@+id/rating_label"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="$" />
+            android:text="Minimum Rating:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/city_input_layout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-        <com.google.android.material.chip.Chip
-            android:id="@+id/cost_chip_3"
-            style="@style/Widget.MaterialComponents.Chip.Filter"
-            android:layout_width="wrap_content"
+        <!-- Distance Label -->
+        <com.google.android.material.slider.Slider
+            android:id="@+id/rating_slider"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="$$" />
+            android:layout_marginTop="4dp"
+            android:stepSize="0.5"
+            android:value="3.0"
+            android:valueFrom="0.0"
+            android:valueTo="5.0"
+            app:labelBehavior="withinBounds"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rating_label" />
 
-        <com.google.android.material.chip.Chip
-            android:id="@+id/cost_chip_4"
-            style="@style/Widget.MaterialComponents.Chip.Filter"
-            android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/distance_label"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="$$$" />
-    </com.google.android.material.chip.ChipGroup>
+            android:text="Distance"
+            android:labelFor="@+id/distance_edit_text"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="4dp"
+            app:layout_constraintTop_toBottomOf="@id/rating_slider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Family Friendly Section -->
-    <com.google.android.material.checkbox.MaterialCheckBox
-        android:id="@+id/family_friendly_checkbox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Family Friendly"
-        android:textSize="16sp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@id/cost_chip_group"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        <!-- Distance Section -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/distance_input_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Within Miles (e.g., 5)"
+            app:layout_constraintTop_toBottomOf="@id/distance_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
-    <!-- Search Button -->
-    <Button
-        android:id="@+id/search_button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Search"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="16dp"
-        android:minHeight="48dp"
-        app:layout_constraintTop_toBottomOf="@id/family_friendly_checkbox"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/distance_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- Open Now Section -->
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/open_now_switch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Open Now"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/distance_input_layout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Price Section -->
+        <TextView
+            android:id="@+id/cost_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Price:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/open_now_switch"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/cost_chip_group"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:singleSelection="true"
+            app:selectionRequired="false"
+            app:layout_constraintTop_toBottomOf="@id/cost_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/cost_chip_1"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Free" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/cost_chip_2"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/cost_chip_3"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$$" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/cost_chip_4"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$$$" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <!-- Family Friendly Section -->
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/family_friendly_checkbox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Family Friendly"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/cost_chip_group"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Search Button -->
+        <Button
+            android:id="@+id/search_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="16dp"
+            android:minHeight="48dp"
+            app:layout_constraintTop_toBottomOf="@id/family_friendly_checkbox"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
